@@ -1,0 +1,21 @@
+# Comparación entre Programación Tradicional y Programación Orientada a Objetos
+
+## Programación Tradicional
+
+- Se basa en funciones y estructuras secuenciales.
+- El flujo de control es lineal, lo que la hace sencilla para tareas pequeñas.
+- Menor reutilización de código.
+- El acceso a los datos es directo, sin encapsulamiento.
+- Ideal para programas simples y rápidos de implementar.
+
+## Programación Orientada a Objetos
+
+- Se estructura en clases y objetos, lo que permite modelar entidades del mundo real.
+- Favorece el **encapsulamiento**, la **herencia** y el **polimorfismo**.
+- Mejor organización del código y mayor reutilización.
+- Facilita el mantenimiento y la ampliación del sistema.
+- Es preferida en aplicaciones grandes y complejas.
+
+## Conclusión
+
+Ambos enfoques son útiles dependiendo del contexto. La programación tradicional es más directa, mientras que la POO ofrece una estructura más robusta para aplicaciones a largo plazo.
