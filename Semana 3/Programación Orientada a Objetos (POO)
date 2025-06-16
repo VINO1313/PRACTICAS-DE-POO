@@ -1,0 +1,34 @@
+# Programa con POO para calcular el promedio semanal de temperaturas
+
+class ClimaSemanal:
+    def __init__(self):
+        self.__temperaturas = []  # Encapsulamiento
+
+    def ingresar_temperaturas(self):
+        for i in range(7):
+            temp = float(input(f"Ingrese la temperatura del día {i+1}: "))
+            self.__temperaturas.append(temp)
+
+    def calcular_promedio(self):
+        if len(self.__temperaturas) == 0:
+            return 0
+        return sum(self.__temperaturas) / len(self.__temperaturas)
+
+    def mostrar_promedio(self):
+        promedio = self.calcular_promedio()
+        print(f"El promedio semanal de temperatura es: {promedio:.2f}°C")
+
+# Herencia básica para demostrar su uso (opcional)
+class ClimaConMensaje(ClimaSemanal):
+    def mostrar_mensaje_final(self):
+        print("Gracias por usar el programa de promedio de clima.")
+
+def main():
+    print("=== Promedio Semanal de Temperaturas (POO) ===")
+    clima = ClimaConMensaje()
+    clima.ingresar_temperaturas()
+    clima.mostrar_promedio()
+    clima.mostrar_mensaje_final()
+
+if __name__ == "__main__":
+    main()
