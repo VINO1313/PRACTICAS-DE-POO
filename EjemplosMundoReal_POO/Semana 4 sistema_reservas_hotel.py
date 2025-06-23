@@ -79,3 +79,21 @@ mi_hotel.mostrar_habitaciones_disponibles()
 # Mostrar reservas realizadas
 mi_hotel.mostrar_reservas()
 
+
+# Sistema de Reservas de Hotel
+
+Este programa es un ejemplo de aplicación del paradigma de Programación Orientada a Objetos (POO) en Python.
+
+## Finalidad
+El sistema simula la gestión de un pequeño hotel, permitiendo registrar clientes, mostrar habitaciones disponibles y realizar reservas. Cada clase representa un elemento del mundo real: clientes, habitaciones y hotel. Se utiliza encapsulación, instanciación de objetos y se demuestra cómo los objetos interactúan entre sí para lograr el objetivo del sistema.
+
+## Clases utilizadas
+- Cliente
+- Habitacion
+- Hotel
+
+## Cómo ejecutar
+Ejecuta `sistema_reservas_hotel.py` en un entorno de desarrollo Python 3.
+
+## Captura de ejecución
+Se incluye en el archivo `captura_ejecucion.png`.
