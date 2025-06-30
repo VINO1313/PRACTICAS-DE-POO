@@ -1,0 +1,100 @@
+# Sistema Financiero Personal en Python
+# Autor: Marcos Delgado
+# Descripción: Este programa permite al usuario registrar ingresos y gastos,
+# calcular el balance actual, y mostrar si tiene superávit, déficit o equilibrio financiero.
+
+def mostrar_menu():
+    """
+    Muestra las opciones disponibles en el sistema financiero.
+    """
+    print("\n===== MENÚ DEL SISTEMA FINANCIERO =====")
+    print("1. Registrar ingreso")
+    print("2. Registrar gasto")
+    print("3. Mostrar balance actual")
+    print("4. Salir")
+
+
+def calcular_balance(lista_ingresos, lista_gastos):
+    """
+    Calcula el total de ingresos, gastos y saldo final.
+    """
+    total_ingresos = sum(lista_ingresos)
+    total_gastos = sum(lista_gastos)
+    saldo_final = total_ingresos - total_gastos
+    return total_ingresos, total_gastos, saldo_final
+
+
+# Variables principales
+ingresos = []  # Lista para almacenar los ingresos (float)
+gastos = []    # Lista para almacenar los gastos (float)
+
+print("=======================================")
+print(" Bienvenido al Sistema Financiero UEA ")
+print("=======================================")
+
+while True:
+    mostrar_menu()
+    opcion = input("Selecciona una opción (1-4): ")
+
+    if opcion == "1":
+        try:
+            monto_ingreso = float(input("Ingresa el monto del ingreso ($): "))
+            if monto_ingreso > 0:
+                ingresos.append(monto_ingreso)
+                print(f"Ingreso de ${monto_ingreso:.2f} registrado.")
+            else:
+                print("El ingreso debe ser un número positivo.")
+        except ValueError:
+            print("Error: Debes ingresar un valor numérico válido.")
+
+    elif opcion == "2":
+        try:
+            monto_gasto = float(input("Ingresa el monto del gasto ($): "))
+            if monto_gasto > 0:
+                gastos.append(monto_gasto)
+                print(f"Gasto de ${monto_gasto:.2f} registrado.")
+            else:
+                print("El gasto debe ser un número positivo.")
+        except ValueError:
+            print("Error: Debes ingresar un valor numérico válido.")
+
+    elif opcion == "3":
+        total_ingresos, total_gastos, saldo = calcular_balance(ingresos, gastos)
+        print("\n-------- BALANCE FINANCIERO --------")
+        print(f"Total de ingresos: ${total_ingresos:.2f}")
+        print(f"Total de gastos:   ${total_gastos:.2f}")
+        print(f"Saldo actual:      ${saldo:.2f}")
+        if saldo > 0:
+            print("Estado: Superávit ")
+        elif saldo < 0:
+            print("Estado: Déficit ")
+        else:
+            print("Estado: Equilibrio ")
+
+    elif opcion == "4":
+        print("Gracias por usar el sistema financiero. ¡Hasta pronto!")
+        break
+
+    else:
+        print("Opción no válida. Intenta nuevamente.")
+
+
+        # Explicacion del codigo paso a paso
+        # Sistema Financiero Personal en Python
+
+Este programa fue desarrollado por (Marcos Delgado) como parte de la asignatura de Fundamentos de Programación en la Universidad Estatal Amazónica.
+
+## Funcionalidad
+Permite registrar ingresos y gastos personales, calcular el balance financiero y determinar si hay superávit, déficit o equilibrio.
+
+## Características Técnicas
+- Uso de **tipos de datos**: `float`, `string`, `list`, `boolean`.
+- Identificadores claros usando convención `snake_case`.
+- Comentarios explicativos en todo el código.
+- Interfaz de consola simple y funcional.
+
+## Ejecución
+Este código está diseñado para ejecutarse en PyCharm o desde consola con Python 3.x.
+
+## Créditos
+Desarrollado por Marcos Delgado - Segundo semestre de Tecnología de la Información.
