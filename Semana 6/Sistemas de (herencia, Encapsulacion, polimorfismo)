@@ -1,0 +1,37 @@
+# Sistemas de Animales (herencia, Encapsulacion, polimorfismo)
+
+class Animal:
+    def __init__(self, nombre, edad):
+        self._nombre = nombre
+        self._edad = edad
+
+    def hacer_sonido(self):
+        return "El animal hace un sonido."
+
+    def descripcion(self):
+        return f"Nombre: {self._nombre}, Edad: {self._edad}"
+
+
+class Perro(Animal):
+    def __init__(self, nombre, edad, raza):
+        super().__init__(nombre, edad)
+        self._raza = raza
+
+    def hacer_sonido(self):
+        return "El perro ladra."
+
+    def descripcion(self):
+        return f"Nombre: {self._nombre}, Edad: {self._edad}, Raza: {self._raza}"
+
+
+# Código principal para crear instancias y mostrar resultados
+
+if __name__ == "__main__":
+    animal1 = Animal("AnimalGenérico", 5)
+    perro1 = Perro("Firulais", 3, "Labrador")
+
+    print(animal1.descripcion())
+    print(animal1.hacer_sonido())
+
+    print(perro1.descripcion())
+    print(perro1.hacer_sonido())
